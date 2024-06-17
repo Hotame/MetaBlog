@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaBlog - Signup</title>
+    <link rel="stylesheet" href="CSS/signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/style.css">
+    <style>
+        body {
+            font-weight: normal;
+            overflow-y: auto;
+            height: 122vh;
+            background-color: #f5f5f5;
+            animation: fadeIn 1.2s ease-in, subtleScale 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes subtleScale {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .wrapper {
+            margin-top: 135px;
+            margin-left: 10px;
+            animation: slideInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+
+        <div class="form-box login">
+            <h2 class="animation" style="--i:0; --j:21;">Login</h2>
+            <form action="#" autocomplete="off">
+                <div class="input-box animation" style="--i:1; --j:22;">
+                    <input type="text" required>
+                    <label>Email</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box animation" style="--i:2; --j:23;">
+                    <input type="password" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn animation" style="--i:3; --j:24;"
+                    onclick="navigateToHome()">Login</button>
+                <div class="logreg-link animation" style="--i:4; --j:25;">
+                    <p>Don't have an account? <a href="#" class="register-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-text login">
+            <h2 class="animation" style="--i:0; --j:20;">Hello User!</h2>
+            <p class="animation" style="--i:1; --j:21;">Please enter valid email and password to get in.</p>
+        </div>
+
+        <div class="form-box register">
+            <h2 class="animation" style="--i:17; --j:0;">Sign Up</h2>
+            <form action="#" autocomplete="off">
+                <div class="input-box animation" style="--i:18; --j:1;">
+                    <input type="text" required>
+                    <label>Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box animation" style="--i:19; --j:2;">
+                    <input type="text" required>
+                    <label>Email</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box animation" style="--i:20; --j:3;">
+                    <input type="password" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="btn animation" style="--i:21; --j:4;">Sign Up</button>
+                <div class="logreg-link animation" style="--i:22; --j:5;">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-text register">
+            <h2 class="animation" style="--i:17; --j:0;">Greetings User!</h2>
+            <p class="animation" style="--i:18; --j:1;">Please enter your new username, email, and password to create
+                your account.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="">Blogs</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 MetaBlog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="JS/index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginButton = document.querySelector('.btn');
+            loginButton.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent form submission
+                const wrapper = document.querySelector('.wrapper');
+                wrapper.classList.add('fade-out');
+                setTimeout(function () {
+                    window.location.href = 'index.html';
+                }, 700); // Match the duration of the CSS transition
+            });
+        });
+
+    </script>
+</body>
+
+</html>

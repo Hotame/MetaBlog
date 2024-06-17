@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="light">
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">MetaBlog</a>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="assets/profile-icon.png" alt="User Profile" class="user-profile-icon" id="profileIcon">
+            <div class="dropdown" id="dropdownMenu">
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="signup.html">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="main-section">
+        <h1>MetaBlog Application</h1>
+        <p>Welcome to the Metablog, where you can explore the latest insights and stories from our vibrant
+            community of writers. Discover thought-provoking articles, insightful analyses, and inspiring narratives
+            that delve into various topics ranging from technology and science to arts and culture.</p>
+        <a href="#blog-content" class="scroll-to-next-section">
+            <button>View Latest Blogs</button>
+        </a>
+    </section>
+
+    <section id="blog-content" class="blog-section">
+        <h1>Latest Blogs</h1>
+        <div class="filter-chips">
+            <div class="chip active" data-filter="all">All</div>
+            <div class="chip" data-filter="design">Design</div>
+            <div class="chip" data-filter="tech">Tech</div>
+            <div class="chip" data-filter="mobile">Mobile</div>
+        </div>
+
+        <div class="blog-cards" data-id="1">
+            <!-- Blog Card 1 -->
+            <div class="blog-card">
+                <img src="assets/background-image.jpg" alt="Post Image" class="blog-image">
+                <div class="blog-info">
+                    <div class="blog-type">Mobile</div>
+                    <h3 class="blog-title">Learn More About The Fundamentals and Basics Of Programming</h3>
+                    <div class="blog-meta">
+                        <span class="blog-date">June 15, 2024</span>
+                    </div>
+                    <br>
+                    <p class="blog-description">
+                        In programming, variables are containers for storing data. They act as placeholders for values
+                        that can change, such as numbers or strings. Functions are reusable blocks of code that perform
+                        a specific task when called. They can take input, process it, and return a result. Objects are
+                        instances of classes, encapsulating data (attributes) and behaviors (methods). In
+                        object-oriented programming, inheritance allows one class (subclass) to inherit properties and
+                        methods from another class (superclass), promoting code reuse and organization. APIs
+                        (Application Programming Interfaces) define methods for different software components to
+                        interact. Version control systems like Git track changes in code, enabling collaboration and
+                        managing project history.
+                    </p>
+                    <div class="author-info">
+                        <img src="assets/woman.png" alt="Author Profile" class="author-image">
+                        <span class="author-name">John Doe</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog Card 3 -->
+            <div class="blog-card" data-id="2">
+                <img src="assets/hands-820272_1920.jpg" alt="Post Image" class="blog-image">
+                <div class="blog-info">
+                    <span class="blog-type">Mobile</span>
+                    <h3 class="blog-title">Learn More About The Fundamentals and Basics Of Programming</h3>
+                    <div class="blog-meta">
+                        <span class="blog-date">June 15, 2024</span>
+                    </div>
+                    <br>
+                    <p class="blog-description">
+                        In programming, variables are containers for storing data. They act as placeholders for values
+                        that can change, such as numbers or strings. Functions are reusable blocks of code that perform
+                        a specific task when called. They can take input, process it, and return a result. Objects are
+                        instances of classes, encapsulating data (attributes) and behaviors (methods). In
+                        object-oriented programming, inheritance allows one class (subclass) to inherit properties and
+                        methods from another class (superclass), promoting code reuse and organization. APIs
+                        (Application Programming Interfaces) define methods for different software components to
+                        interact. Version control systems like Git track changes in code, enabling collaboration and
+                        managing project history.
+                    </p>
+                    <div class="author-info">
+                        <img src="assets/man.png" alt="Author Profile" class="author-image">
+                        <span class="author-name">John Doe</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-card" data-id="3">
+                <img src="assets/library-869061_1920.jpg" alt="Post Image" class="blog-image">
+                <div class="blog-info">
+                    <span class="blog-type">Mobile</span>
+                    <h3 class="blog-title">Learn More About The Fundamentals and Basics Of Programming</h3>
+                    <div class="blog-meta">
+                        <span class="blog-date">June 15, 2024</span>
+                    </div>
+                    <br>
+                    <p class="blog-description">
+                        In programming, variables are containers for storing data. They act as placeholders for values
+                        that can change, such as numbers or strings. Functions are reusable blocks of code that perform
+                        a specific task when called. They can take input, process it, and return a result. Objects are
+                        instances of classes, encapsulating data (attributes) and behaviors (methods). In
+                        object-oriented programming, inheritance allows one class (subclass) to inherit properties and
+                        methods from another class (superclass), promoting code reuse and organization. APIs
+                        (Application Programming Interfaces) define methods for different software components to
+                        interact. Version control systems like Git track changes in code, enabling collaboration and
+                        managing project history.
+                    </p>
+                    <div class="author-info">
+                        <img src="assets/woman.png" alt="Author Profile" class="author-image">
+                        <span class="author-name">John Doe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="fab-container">
+        <div class="fab-button">
+            <i class="fas fa-plus"></i> <!-- Example icon from Font Awesome -->
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="">Blogs</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 MetaBlog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <video autoplay muted loop id="video-background">
+        <source src="assets/animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const profileIcon = document.getElementById('profileIcon');
+
+            profileIcon.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('active');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (!dropdownMenu.contains(e.target) && e.target !== profileIcon) {
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+
+            dropdownMenu.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+
+            function animateBlogCards() {
+                const blogCards = document.querySelectorAll('.blog-card');
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                blogCards.forEach(card => {
+                    observer.observe(card);
+                });
+            }
+
+            // Function to handle scrolling to blog section
+            function scrollToBlogSection() {
+                const scrollButton = document.querySelector('.scroll-to-next-section');
+                const blogContentSection = document.getElementById('blog-content');
+
+                scrollButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    blogContentSection.scrollIntoView({ behavior: 'smooth' });
+
+                    // Animate blog cards when scrolled into view
+                    const blogCards = document.querySelectorAll('.blog-card');
+                    blogCards.forEach(card => {
+                        card.style.opacity = '0'; // Reset opacity for re-animation
+                    });
+                });
+            }
+
+            // Function to adjust FAB visibility based on scroll position
+            function adjustFabVisibility() {
+                const fab = document.querySelector(".fab-container");
+                const blogSection = document.getElementById("blog-content");
+                const footer = document.querySelector("footer");
+                const blogSectionRect = blogSection.getBoundingClientRect();
+                const footerRect = footer.getBoundingClientRect();
+                const scrollY = window.scrollY || window.pageYOffset;
+
+                const blogSectionTop = blogSectionRect.top + scrollY;
+                const blogSectionBottom = blogSectionTop + blogSectionRect.height;
+                const footerTop = footerRect.top + scrollY;
+
+                const isInBlogSection = scrollY >= blogSectionTop && scrollY <= blogSectionBottom;
+                const isFooterInView = scrollY + window.innerHeight >= footerTop;
+
+                if (isInBlogSection && !isFooterInView) {
+                    fab.style.display = "flex";
+                } else {
+                    fab.style.display = "none";
+                }
+            }
+
+            // Event listeners
+            scrollToBlogSection(); // Initialize scroll behavior for "View Latest Blogs" button
+            animateBlogCards(); // Initialize blog card animations
+            window.addEventListener('scroll', adjustFabVisibility);
+            window.addEventListener('resize', adjustFabVisibility);
+
+            const fabButton = document.querySelector('.fab-button');
+            fabButton.addEventListener('click', () => {
+                // Add the "clicked" class to trigger the animation
+                fabButton.classList.add('clicked');
+
+                // Wait for the animation to complete before redirecting
+                setTimeout(() => {
+                    window.location.href = 'add-blog.html';
+                }, 1000); // Match the updated duration of the animation
+            });
+
+            // Set blog section height based on the number of blog cards
+            const blogSection = document.getElementById('blog-content');
+            const blogCards = blogSection.querySelectorAll('.blog-card');
+
+            let blogSectionHeight = '800px'; // Default height
+
+            if (blogCards.length > 3) {
+                blogSectionHeight = 'auto'; // Increase height for more than 3 cards
+            } else if (blogCards.length <= 3) {
+                blogSectionHeight = '1000px'; // Adjust height for exactly 3 cards
+            }
+            blogSection.style.height = blogSectionHeight;
+        });
+
+        // Add this script to your existing script or create a new JS file
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle click on blog cards
+            const blogCards = document.querySelectorAll('.blog-card');
+            blogCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const blogData = {
+                        image: card.querySelector('.blog-image').src,
+                        type: card.querySelector('.blog-type').innerText,
+                        title: card.querySelector('.blog-title').innerText,
+                        description: card.querySelector('.blog-description').innerText,
+                        authorImage: card.querySelector('.author-image').src,
+                        authorName: card.querySelector('.author-name').innerText,
+                    };
+                    localStorage.setItem('selectedBlog', JSON.stringify(blogData));
+                    window.location.href = 'view-more-blog.html';
+                });
+            });
+
+            // Populate view-more-blog.html with the data from localStorage
+            if (window.location.pathname.includes('view-more-blog.html')) {
+                const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+                if (blogData) {
+                    document.querySelector('.blog-detail-image').src = blogData.image;
+                    document.querySelector('.blog-detail-type').innerText = blogData.type;
+                    document.querySelector('.blog-detail-title').innerText = blogData.title;
+                    document.querySelector('.blog-detail-description').innerText = blogData.description;
+                    document.querySelector('.author-detail-image').src = blogData.authorImage;
+                    document.querySelector('.author-detail-name').innerText = blogData.authorName;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

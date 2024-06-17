@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View More Blog</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1e232c;
+            color: #FFFFFF;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #1e232c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            color: #A3C6E3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            margin-left: 30px;
+            gap: 20px;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .nav-links a:hover {
+            color: #A3C6E3;
+        }
+
+        .user-profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* Blog detail section styles */
+        .blog-detail-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            min-height: 80vh;
+        }
+
+        .blog-detail-container {
+            margin-top: 0px;
+            display: flex;
+            gap: 40px;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #2b323d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            /* Hide overflow to simulate closed effect */
+            transform: perspective(1500px) rotateY(100deg) scale(0.8);
+            opacity: 0;
+            /* Initially hidden */
+            transition: transform 1.5s cubic-bezier(0.50, 1, 0.79, 1), opacity 1s ease-out;
+        }
+
+        .blog-detail-container.open {
+            transform: perspective(1500px) rotateY(0deg) scale(1);
+            opacity: 1;
+        }
+
+        .blog-detail-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-out;
+            /* Smooth image scaling */
+        }
+
+        .blog-detail-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .blog-detail-type {
+            background-color: #4682B4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            align-self: flex-start;
+        }
+
+        .blog-detail-title {
+            font-size: 2.5em;
+            color: #fff;
+            margin: 0;
+        }
+
+        .blog-detail-description {
+            font-size: 1.1em;
+            color: #ddd;
+            margin-top: -5px;
+        }
+
+        .author-detail-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-detail-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .author-detail-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #A3C6E3;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .blog-detail-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">MetaBlog</a>
+            <ul class="nav-links">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="assets/profile-icon.png" alt="User Profile" class="user-profile-icon" id="profileIcon">
+            <div class="dropdown" id="dropdownMenu">
+                <ul class="dropdown-menu">
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="signup.html">Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="blog-detail-section">
+        <div class="blog-detail-container">
+            <img src="assets/sample-blog-image.jpg" alt="Blog Image" class="blog-detail-image">
+            <div class="blog-detail-content">
+                <span class="blog-detail-type">Tech</span>
+                <h1 class="blog-detail-title">How To Create UX Design With Adobe XD</h1>
+                <div class="author-detail-info">
+                    <img src="assets/sample-author-image.jpg" alt="Author Image" class="author-detail-image">
+                    <span class="author-detail-name">John Doe</span>
+                </div>
+                <p class="blog-detail-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem,
+                    minus?</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Blogs</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 MetaBlog. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const blogData = JSON.parse(localStorage.getItem('selectedBlog'));
+
+            if (blogData) {
+                document.querySelector('.blog-detail-image').src = blogData.image;
+                document.querySelector('.blog-detail-type').textContent = blogData.type;
+                document.querySelector('.blog-detail-title').textContent = blogData.title;
+                document.querySelector('.blog-detail-description').textContent = blogData.description;
+                document.querySelector('.author-detail-image').src = blogData.authorImage;
+                document.querySelector('.author-detail-name').textContent = blogData.authorName;
+
+                // Add 'open' class to animate opening effect
+                const blogDetailContainer = document.querySelector('.blog-detail-container');
+                blogDetailContainer.classList.add('open');
+            } else {
+                document.querySelector('.blog-detail-container').innerHTML = '<p>No blog data found. Please go back and select a blog to view.</p>';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
